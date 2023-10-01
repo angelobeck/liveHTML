@@ -1,0 +1,11 @@
+* { box-sizing:border-box; }
+body { background-color:#cfa; }
+#dinamic-html { width: 100%; background-image:url(floresta.jpg);                           }
+textarea { width:100%; height:60vh; }
+.tablist { display:flex; width:100%; padding:1em; }
+.tablist > div { flex-grow:1; text-align:center; padding:.5em; }
+.tablist { background-color:#000; color:#0f0; }
+.tablist > div { border:2px solid #0f0; border-radius:.5em; }
+.tablist [aria-selected=true] { background-color: #040; }
+.editor { background-color:#444; color:#fff; }
+textarea { background-color:#000; color:#fff; padding:.5em; border:2px solid #fff; }

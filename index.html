@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Experimentando acessibilidade</title>
+<link rel="stylesheet" href="index.css">
+<style id="dinamic-css"></style>
+</head>
+<body>
+<div style="display:flex; flex-direction:column; min-height:100vh; ">
+<div id="dinamic-html" style="flex-grow:1; "></div>
+<div role="tablist" class="tablist">
+<div data-name="html" role="tab" tabindex="0" aria-selected="true" onclick="tabClick(event)" onkeydown="tabKeyDown(event)">HTML</div>
+<div data-name="js" role="tab" tabindex="-1" aria-selected="false" onclick="tabClick(event)" onkeydown="tabKeyDown(event)"style="flex-grow:1">JS</div>
+<div data-name="css" role="tab" tabindex="-1" aria-selected="false" onclick="tabClick(event)" onkeydown="tabKeyDown(event)"style="flex-grow:1">CSS</div>
+</div>
+<div id="editor">
+<div id="html">
+<label>HTML<br><textarea onblur="document.getElementById('dinamic-html').innerHTML = this.value"></textarea></label>
+</div>
+<div id="js" hidden>
+<label>JS<br><textarea onblur="eval(this.value)"></textarea></label>
+</div>
+<div id="css" hidden>
+<label>CSS<br><textarea onblur="document.getElementById('dinamic-css').innerHTML = this.value"></textarea></label>
+</div>
+</div>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>
